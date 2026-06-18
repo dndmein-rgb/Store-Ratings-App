@@ -4,12 +4,6 @@ A web app where users can rate stores from 1 to 5. Built with Express, PostgreSQ
 
 **🚀 Production-ready for single-entity deployment on Render.com**
 
-## Quick Links
-
-- 📖 [Quick Start](./QUICK_START.md) - Deploy in 5 minutes
-- 📋 [Full Deployment Guide](./RENDER_DEPLOYMENT.md) - Complete technical guide
-- ✅ [Deployment Checklist](./DEPLOYMENT_CHECKLIST.md) - Verification steps
-- 📊 [Deployment Summary](./DEPLOYMENT_SUMMARY.md) - Overview of changes
 
 ## Project structure
 
@@ -142,4 +136,3 @@ This app is configured for **single-entity deployment** on Render:
    curl https://your-app.onrender.com/api/health
    ```
 
-📖 **See [QUICK_START.md](./QUICK_START.md) for detailed deployment steps.**
