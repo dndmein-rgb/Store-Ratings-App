@@ -1,0 +1,30 @@
+{
+  "name": "store-ratings-app",
+  "version": "1.0.0",
+  "description": "Store Ratings Application - Full Stack",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "install-all": "npm install && npm install --prefix frontend && npm install --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend && npm start --prefix backend",
+    "start": "node backend/src/app.js",
+    "serve": "npm run preview --prefix frontend & npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "store",
+    "ratings",
+    "app",
+    "express",
+    "react",
+    "postgresql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

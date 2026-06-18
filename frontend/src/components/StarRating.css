@@ -1,0 +1,27 @@
+.star-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star {
+  color: #d9d9d9;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.star-rating--sm .star {
+  font-size: 15px;
+}
+
+.star--filled {
+  color: #d98c2b;
+}
+
+.star--clickable {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.star--clickable:hover {
+  transform: scale(1.15);
+}
