@@ -9,9 +9,8 @@
   "scripts": {
     "install-all": "npm install && npm install --prefix frontend && npm install --prefix backend",
     "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
-    "build": "npm run build --prefix frontend && npm start --prefix backend",
+    "build": "npm run build --prefix frontend",
     "start": "node backend/src/app.js",
-    "serve": "npm run preview --prefix frontend & npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -24,6 +23,7 @@
   ],
   "author": "",
   "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
     "concurrently": "^9.1.0"
   }
