@@ -72,7 +72,7 @@ app.use('/api', (req, res) => {
 });
 
 // Serve frontend for all non-API routes (SPA routing)
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(frontendDistPath, 'index.html'));
 });
 
