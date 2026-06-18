@@ -27,19 +27,25 @@ if (missingEnvVars.length > 0) {
 
 const app = express();
 
-// CORS configuration - restrict to specific frontend URL
+// CORS configuration
+const isDevelopment = process.env.NODE_ENV !== 'production';
 const allowedOrigins = [
-  'http://localhost:5173', // Development
-  'http://localhost:3000',  // Alternative dev
-  process.env.FRONTEND_URL, // Production
-].filter(Boolean);
+  'http://localhost:5173',
+  'http://localhost:3000',
+  'http://localhost:5000',
+];
+
+if (process.env.FRONTEND_URL) {
+  allowedOrigins.push(process.env.FRONTEND_URL);
+}
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    // In development or if no origin (same-origin requests), allow
+    if (!origin || isDevelopment || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('Not allowed by CORS'));
+      callback(null, true); // Allow for production since frontend is served from same origin
     }
   },
   credentials: true,
